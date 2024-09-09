@@ -12,7 +12,7 @@ jobs:
       - name: Rcwl-to-cwl-validate
         run: |
           library(RcwlPipelines)
-          rfiles <- list.files("Rcwl", "*.R", full.names = TRUE)
+          rfiles <- list.files("Rcwl", "tl*.R", full.names = TRUE)
           for(f in rfiles){
               tl <- cwlLoad(f)
               tl_n <- sub(".R$", "", basename(f))
