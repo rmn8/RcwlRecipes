@@ -5,8 +5,10 @@ name: cwltool-validate
 jobs:
   cwltool-validate:
     runs-on: ubuntu-latest
-    container: hubentu/rcwl:latest
-
+    container: 
+      image: hubentu/rcwl:latest
+      options: --user root
+  
     steps:
       - uses: actions/checkout@v2
       - name: Rcwl-to-cwl-validate
